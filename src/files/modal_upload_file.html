@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Upload a file</h2>
+  </div>
+</div>
+
+<!-- controlleris found in files_upload_modal which is in files.js 
+It has 3 functions:
+upload_files_button
+update_error
+cancel
+-->
+<div class="row ">
+  <div class="col-md-10 col-md-offset-1 well">
+    <h4>New File</h4>
+    <input type="file" fileread="ui.selected_files">
+    <br/>
+    <ul>
+    	<li ng-repeat="file in ui.selected_files">{{file.name}}</li>
+    </ul>
+    <br/>
+    <button type="button" class="btn btn-primary" ng-click="upload_files_button()" ng-disabled="(!ui.selected_files || ui.selected_files.length === 0)">Upload</button>
+  </div>
+</div>
+
+<div class="row ">
+  <div class="col-md-10 col-md-offset-1 well">
+    <button type="button" class="btn btn-primary" ng-click="cancel()" >Cancel</button>
+  </div>
+</div>

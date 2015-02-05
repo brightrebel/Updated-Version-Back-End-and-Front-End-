@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <h2>Edit Profile</h2>
+  </div>
+</div>
+
+<form class="white-row" name="userForm"  novalidate>
+  <div class="form-body">
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.firstname.$invalid && uidirty}">
+          <label for="firstname">First name</label>
+          <input type="text" class="form-control" name="firstname" id="firstname" ng-model="ui.firstname" ng-required="true"/>
+          <p ng-show="userForm.firstname.$invalid && uidirty" class="help-block">First Name is Required.</p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.lastname.$invalid && uidirty}">
+          <label for="lastname">Last Name</label>
+          <input type="text" class="form-control" name="lastname" id="lastname" ng-model="ui.lastname" ng-required="true"/>
+          <p ng-show="userForm.lastname.$invalid && uidirty" class="help-block">Last Name is Required.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && uidirty}">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email" ng-model="ui.email" ng-required="true"/>
+          <p ng-show="userForm.email.$invalid && uidirty" class="help-block">Enter a valid email.</p>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && uidirty}">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password" ng-model="ui.password" ng-required="true"/>
+          <p ng-show="userForm.password.$invalid && uidirty" class="help-block">Enter a valid password.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <button class="btn btn-primary" ng-click="ui_submit(userForm.$valid)">Continue</button>
+      </div>
+    </div>
+
+  </div>
+</form>
+
+
+

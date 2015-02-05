@@ -1,0 +1,59 @@
+<style type="text/css">
+.well{
+
+}
+</style>
+
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+	  <div class="well well-sm">
+	    <h2 ng-model="ui.eventname" style="color:#191A1C;">{{ui.eventname}}</h2>
+	    <h3 ng-model="ui.eventlocation" style="color:#191A1C;">{{ui.eventlocation}}</h3>
+	    <h4 ng-model="ui.eventshort" style="color:#191A1C;">{{ui.eventshort}}</h4>
+	    <h5 ng-model="ui.eventlong" style="color:#191A1C;">{{ui.eventlong}}</h5>
+	    <div ng-repeat="b in ui.eventbody">
+	    	<p ng-show="b.type == 'text'" style="color:#191A1C;">{{b.text}}</p>
+	    	<div ng-show="b.type == 'pic'">
+	  			 <img ng-src="{{rs.api_generic}}/files/{{b.name}}" style="max-width:390px;"  />
+	  			 <p>&nbsp;</p>
+	  		 </div>
+	     </div>
+    <!-- <h3 ng-model="ui.eventbody" style="color:#191A1C;">{{ui.eventbody}}</h3> -->
+
+<!--   Displaying the selected articles detail as JSON, the controller used is article_controller found in the articles.js file as linked by the app.js file, the function used to connect to the back-ed is  ui_get_article_button -->
+
+<!-- <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div style="display:inline-block;" class="article">
+      <h3>{{ui.eventname}}</h3>
+      <div ng-repeat="b in ui.articlebody">
+      	<p ng-show="b.type == 'text'" >{{b.text}}</p>
+        <div ng-show="b.type == 'pic'">
+  			 <img ng-src="{{rs.api_generic}}/files/{{b.name}}" style="max-width:390px;"  />
+  			 <p>&nbsp;</p>
+  		  </div>
+      </div>
+    </div>
+  </div>
+</div>
+ -->
+
+
+
+    <!-- <pre ng-bind="ui | json" ></pre>		 -->
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+  	
+  </div>
+ </div>
+
+<!--   A Edit button that calls the function ui_edit_article_button(), that is found in the articles.js file under the article controller, that changes the location to ('/article_edit/' + $scope.ui._id), which in turn alerts the app.js file to redirect the browser to src/article/article_edit.html and look in the edit_article_controller found in the articles.js file for instructions  -->
+	
+<!--       <button type="button" class="btn btn-primary" ng-click="ui_edit_article_button()">Edit Article</button>				
+  </div>
+</div> -->

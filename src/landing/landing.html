@@ -1,0 +1,146 @@
+<style>
+/*.pointer {
+    cursor: pointer;
+}*/
+
+
+.well {
+    opacity: 1; /* opacity [0-1] */
+    -moz-opacity: 1; /* opacity [0-1] */
+    -webkit-opacity: 1; /* opacity [0-1] */
+    background-color: #191A1C;
+    border-color: #C8B47D;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    
+}
+.event_menu{
+		border: 2px solid #C8B47D;
+		padding:0px;
+		cursor: pointer;
+}
+
+
+.event_menu:hover {
+	border-color: #3B96D8;
+
+	}
+
+.sub_text {
+	background-color: #191A1C;
+	text-align: center;
+	border: 1px solid #C8B47D;
+}
+
+.menu_selected {
+	border: 2px solid #3B96D8;
+	border-color: #3B96D8;
+}
+</style>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'retail'}">
+			<a ng-click="events_button('retail')">
+				<img src="images/navs/retailnav.png" style="width:100%;">
+			</a>
+		</div>
+		<div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'media'}">
+			<a ng-click="events_button('media')">
+				<img src="images/navs/medianav.png" style="width:100%;">
+			</a>
+		</div>
+		<div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'studio'}">
+			<a ng-click="events_button('studio')">
+				<img src="images/navs/studionav.png" style="width:100%;">
+			</a>
+		</div>
+		<div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'art'}">
+			<a ng-click="events_button('art')">
+				<img src="images/navs/Artnav.png" style="width:100%;">
+			</a>
+		</div>
+		<div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'it'}">
+			<a ng-click="events_button('it')">
+				<img src="images/navs/Itnav.png" style="width:100%;">
+			</a>
+		</div>
+	</div>
+	</br>
+
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="col-xs-7" style="border: 2px solid #C8B47D; padding:0; background-color:white;">
+	            <a ng-href="#/event/{{ui_landing.list[0]._id}}">
+					<img ng-src="{{rs.api_generic}}/files/{{rs.ui_landing.list[0].imagename}}" style="width:100% "/>
+					<div class="sub_text">
+						<h4>{{rs.ui_landing.list[0].eventname}}</h4>
+		        		<p>{{rs.ui_landing.list[0].eventshort}}</p>
+	        		</div>
+	        	</a>
+	        	</div>
+			    <div class="col-xs-3" style="border: 2px solid #C8B47D; padding:0;">
+		        	<a ng-href="#/event/{{ui_landing.list[1]._id}}">
+		            	<img ng-src="{{rs.api_generic}}/files/{{rs.ui_landing.list[1].imagename}}" style="width:100% "/>
+						<div class="sub_text">
+						<h4>{{rs.ui_landing.list[1].eventname}}</h4>
+		        		<p>{{rs.ui_landing.list[1].eventshort}}</p>
+	        		</div>
+		           	</a>
+		            <a ng-href="#/event/{{ui_landing.list[2]._id}}">
+		            	<img ng-src="{{rs.api_generic}}/files/{{rs.ui_landing.list[2].imagename}}" style="width:100%" />
+						<div class="sub_text">
+						<h4>{{rs.ui_landing.list[2].eventname}}</h4>
+		        		<p>{{rs.ui_landing.list[2].eventshort}}</p>
+	        		</div>
+		            </a>	
+			    </div>
+	    </div>
+	</div>
+	<!--end row-->
+
+
+
+
+
+
+
+
+<!-- 	Click me: <input type="checkbox" ng-model="checked"><br/>
+	  	<div class="check-element" ng-show="checked"> -->
+
+	<div class="row">
+		<div class="col-xs-10" style="padding:0px">  
+		<div class="col-xs-3" ng-repeat="item in rs.ui_landing.list" style="padding:0px; border: 2px solid #C8B47D;">
+			<div class="well" style="padding:0px;">
+		  		<a ng-href="#/event/{{item._id}}">
+			  		<img ng-src="{{rs.api_generic}}/files/{{item.imagename}}" style="width:100%;" />
+			  		<div class="sub_text">
+						<h4>{{item.eventname}}</h4>
+						<p>{{item.eventshort}}</p>
+					</div>
+				</a>
+		  	</div>
+		  	</div>
+	  	</div>
+	</div>
+
+		<!-- </div>
+		  <div class="check-element animate-show" ng-hide="checked">
+		  </div> -->
+
+	<!-- 	<li ng-repeat="phone in phones | filter:{visible: true} | limitTo:quantity | orderBy:orderProp">
+		    {{phone.name}}
+		    <p>{{phone.snippet}}</p>
+		</li> -->	
+
+
+
+	<!-- 	 <div ng-repeat="video in videos" ng-if="$index > 3">
+		    ...
+		</div> -->
+</div>

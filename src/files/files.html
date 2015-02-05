@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>My files</h2>
+  </div>
+</div>
+
+<div class="row ">
+  <div class="col-md-10 col-md-offset-1 well">
+    <div ng-repeat="f in rs.ui_files.list" >
+      <img ng-src="{{rs.api_generic}}/files/{{f.name}}" style="max-height:100px" />
+      <p>{{f.originalname}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="row ">
+  <div class="col-md-10 col-md-offset-1 well">
+    <h4>New File</h4>
+    <input type="file" fileread="ui.selected_files" multiple>
+    <br/>
+    <ul>
+    	<li ng-repeat="file in ui.selected_files">{{file.name}}</li>
+    </ul>
+    <br/>
+    <button type="button" class="btn btn-primary" ng-click="upload_files_button()" ng-disabled="(!ui.selected_files || ui.selected_files.length === 0)">Upload</button>
+  </div>
+</div>
+

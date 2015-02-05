@@ -1,0 +1,404 @@
+body{
+	background-image: url("../images/misc/br_background.jpg");
+}
+a {
+    text-decoration: none !important;
+}
+form ul{
+	margin: 0px;
+	padding: 0px;
+}
+form li{
+	list-style: none;
+}
+
+#header{
+	margin: auto;
+	margin-top: 30px;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: blue;
+	height: 260px;
+	width:  1005px;
+}
+#lock{
+    opacity: 0;
+    border-radius: 1px;
+}
+
+#lock:hover {
+    opacity: 1.0;
+}
+.btnssemore{
+	margin-top: 10px;
+	width:  1005px;
+}
+#bottons{
+	margin-right: 140px;
+	margin-top: 95px;
+	float: right;
+}
+.botton{
+	height: 33px;
+	width: 87px;
+	background-color: #C5A96F;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #C5A96F;
+	border-radius: 20px;
+	padding-top: 5px;
+	margin: 5px;
+
+}
+.botton:hover { 
+    background-color: black;
+}
+
+#navbar{
+	margin: auto;
+	height: 230px;
+	width:  1005px;
+}
+#socialmedia{
+	height: 70px;
+	width:  1005px;
+	padding: 10px;
+	padding-right: 315px;
+}
+.Snav{
+	height: 50px;
+	width: 50px;
+	float: right;
+	margin-right: 20px;
+	background-color: white;
+}
+#devisionsbar{
+	height: 150px;
+	width:  1005px;
+	background: solid;
+	background-color: #C5A96F;
+}
+.nav{
+	height: 50px;
+
+	border-left: solid;
+	border-width: 1px;
+	border-color: black;
+	float: right;
+	margin-right: 1px;
+}
+.nav2{
+	height: 150px;
+	width: 200px;
+	border-left: solid;
+	border-width: 1px;
+	border-color: black;
+	float: right;
+	margin-right: 1px;
+}
+#newsfeed{
+	margin: auto;
+	height: 300px;
+	width:  1005px;
+}
+#artilceganddisplay{
+	margin: auto;
+	height: 485px;
+	width:  1005px;
+}
+
+
+.Main{
+	margin: auto;
+	height: 500px;
+	width:  1005px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.Main2{
+	margin: auto;
+	width:  1005px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.Main3{
+	margin: auto;
+	width:  1005px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.primarysection{
+	height: 500px;
+	width: 700px;
+	
+}
+.secondarysection{
+	height: 500px;
+	width: 300px;
+	float: right;
+
+}
+.primaryupdate{
+	height: 500px;
+	width: 690px;
+	background-color: white;
+	padding-top: 10px;
+}
+.primeuptextarea{
+	height: 100px;
+	width: 690px;
+	background-color: black;
+	padding: 10px;
+	margin-top: 390px;
+	opacity: 0.5;
+}
+.secondaryupdate{
+	height: 240px;
+	width: 290px;
+	float: right;
+	background-color: white;
+	margin-bottom: 20px;
+}
+.secuptextarea{
+	height: 75px;
+	width: 290px;
+	background-color: black;
+	padding: 5px;
+	margin-top: 165px;
+	opacity: 0.5;
+}
+
+.update{
+	background-color: white;
+	width: 1005px;
+	height: 450px;
+	border-radius: 15px;
+	margin: auto;
+}
+
+.updateli{
+	float: left;
+	background-color: white;
+	width: 199px;
+	height: 199px;
+	margin: 1px;
+	border-radius: 5px;
+}
+
+#updateliarea{
+	float: left;
+	background-color: white;
+	width: 199px;
+	height: 199px;
+	margin: 1px;
+	border-radius: 5px;
+}
+
+.updatelibtn{
+	background-image: url("misc/plus.jpg");
+	float: left;
+	background-color: white;
+	width: 199px;
+	height: 199px;
+	margin: 1px;
+	border-radius: 5px;
+}
+
+#footer{
+	margin: auto;
+	height: 150px;
+	width: 1005px;
+	background-color: #C5A96F;
+}
+.fnav{
+	font-color: white;
+	padding-top: 65px;
+	background-color: #C5A96F;
+	height: 150px;
+	width: 335px;
+	border-left: solid;
+	border-width: 5px;
+	border-color: white;
+	float: right;
+}
+
+.Devisionheader{
+	width: 1005px;
+	height: 150px;
+	margin: auto;
+}
+.devlogo{
+	background-color: white;
+	float: right;
+	width: 200px;
+	height: 150px;
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.devopenspace{
+	background-color: white;
+	float: right;
+	width: 800px;
+	height: 150px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+
+
+
+.ter-data{
+	width: 1005px;
+	height: 750px;
+	margin: auto;
+}
+
+
+.main-ter-data{
+	width: 805px;
+	height: 750px;
+	float: right;
+	background-color: white
+}
+.addbanner{
+	width: 805px;
+	height: 150px;
+}
+.addexplination{
+	width: 805px;
+	height: 300px;
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: black;
+}
+.addexplination-textarea{
+	width: 600px;
+	height: 300px;
+	float: right;
+}
+.addinfo{
+	width: 805px;
+	height: 300px;
+}
+
+
+
+
+
+.secondary-ter-data{
+	width: 200px;
+	height: 750px;
+}
+
+
+.addSM{
+	padding: 25px;
+ 	width: 200px;
+ 	height: 300px;
+ 	border-top: solid;
+ 	border-bottom: solid;
+	border-width: 1px;
+	border-color: white;
+	background-color: black;
+	
+}
+.addsmbtn:hover{
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+}
+.addSMU{
+	width: 200px;
+	height: 300px;
+	background-color: black;
+}
+
+#cmain{
+	height: 500px;
+	width:  1005px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+#mttmain{
+	height: 500px;
+	width:  1005px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+#aumain{
+	height: 500px;
+	width:  1005px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+
+
+.form{
+	width: 1005px;
+	height: 875px;
+	margin: auto;
+	background-color: white;
+	padding: 10px;
+}
+.nform{
+	width: 1005px;
+	height: 100px;
+	margin: auto;
+	background-color: white;
+	padding: 10px;
+}
+#loginform{
+	width: 1005px;
+	height: 200px;
+	margin: auto;
+	background-color: white;
+}
+#logintitle{
+	width: 1005px;
+	height: 50px;
+	background-color: #C5A96F;
+}
+
+.form{
+	width: 100%;
+	height: auto;
+	margin: auto;
+	background-color: white;
+	padding: 10px;
+@@ -365,5 +365,31 @@ form li{
+	height: 50px;
+	background-color: #C5A96F;
+}
+
+.black_overlay{
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+}
+.white_content {
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        padding: 16px;
+        border: 16px solid blue;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+}

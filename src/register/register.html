@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <h2>Registration</h2>
+  </div>
+</div>
+
+<form class="white-row" name="userForm"  novalidate>
+  <div class="form-body">
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.firstname.$invalid && uidirty}">
+          <label for="firstname">First name</label>
+          <input type="text" class="form-control" name="firstname" id="firstname" ng-model="ui.firstname" placeholder="Type in your name" ng-required="true"/>
+          <p ng-show="userForm.firstname.$invalid && uidirty" class="help-block">First Name is Required.</p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.lastname.$invalid && uidirty}">
+          <label for="lastname">Last Name</label>
+          <input type="text" class="form-control" name="lastname" id="lastname" ng-model="ui.lastname" placeholder="Type in your Surname" ng-required="true"/>
+          <p ng-show="userForm.lastname.$invalid && uidirty" class="help-block">Last Name is Required.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && uidirty}">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="email" id="email" ng-model="ui.email" placeholder="Type in your email" ng-required="true"/>
+          <p ng-show="userForm.email.$invalid && uidirty" class="help-block">Enter a valid email.</p>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && uidirty}">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" name="password" id="password" ng-model="ui.password" placeholder="Type in your password" ng-required="true"/>
+          <p ng-show="userForm.password.$invalid && uidirty" class="help-block">Enter a valid password.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : ui.invalid.accept_tac && uidirty}">
+          <label class="checkbox persistent"><input type="checkbox" ng-model="ui.accept_tac"> I agree with the <b style="font-size:15px">Terms and Conditions</b> </label>
+          <p ng-show="ui.invalid.accept_tac && uidirty" class="help-block">Accept T&amp;C.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <button class="btn btn-primary" ng-click="submit_button(userForm.$valid)">Continue</button>
+      </div>
+    </div>
+
+  </div>
+</form>
+
+
+

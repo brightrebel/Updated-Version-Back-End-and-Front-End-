@@ -1,0 +1,39 @@
+<style>
+.pointer {
+    cursor: pointer;
+}
+
+</style>
+
+
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Select image</h2>
+  </div>
+</div>
+
+
+<!-- controlleris found in files_select_modal which is in files.js 
+It has 4 functions:
+get_file_list
+http_error
+ok
+cancel
+-->
+<div class="row ">
+  <div class="col-md-10 col-md-offset-1 well">
+    <div ng-repeat="f in ui.files" >
+      <a ng-click="ok(f.name)" class="pointer">
+        <img ng-src="{{rs.api_generic}}/files/{{f.name}}" style="max-height:100px" />
+        <p>{{f.originalname}}</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row ">
+  <div class="col-md-10 col-md-offset-1 well">
+    <button type="button" class="btn btn-primary" ng-click="cancel()" >Cancel</button>
+  </div>
+</div>

@@ -1,0 +1,145 @@
+
+<!--    -->
+
+<style>
+  .gridList {
+    border: 1px solid rgb(212,212,212);
+    width: 100%;
+    height: 500px;
+  }
+
+  .pointer {
+      cursor: pointer;
+  }
+  
+</style>
+
+<style>
+/*.pointer {
+    cursor: pointer;
+}*/
+.well {
+    opacity: 1; /* opacity [0-1] */
+    -moz-opacity: 1; /* opacity [0-1] */
+    -webkit-opacity: 1; /* opacity [0-1] */
+    background-color: #191A1C;
+    border-color: #C8B47D;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    
+}
+.event_menu{
+    border: 2px solid #C8B47D;
+    padding:0px;
+    cursor: pointer;
+}
+
+
+.event_menu:hover {
+  border-color: #3B96D8;
+
+  }
+
+.sub_text {
+  background-color: #191A1C;
+  text-align: center;
+  border: 2px solid #C8B47D;
+}
+
+.menu_selected {
+  border: 2px solid #3B96D8;
+  border-color: #3B96D8;
+}
+</style>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Events</h2>
+  </div>
+</div>
+
+
+<!--    -->
+
+<!-- <div class="row">
+  <div class="col-md-10 col-md-offset-1">
+      <p>Search fields come here</p>
+      <p>&nbsp;</p>
+      <button class="btn btn-primary" ng-click="events_button('')">All</button>
+  </div>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="row">
+    <div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'retail'}">
+      <a ng-click="events_button('retail')">
+        <img src="images/navs/retailnav.png" style="width:100%;">
+      </a>
+    </div>
+    <div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'media'}">
+      <a ng-click="events_button('media')">
+        <img src="images/navs/medianav.png" style="width:100%;">
+      </a>
+    </div>
+    <div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'studio'}">
+      <a ng-click="events_button('studio')">
+        <img src="images/navs/studionav.png" style="width:100%;">
+      </a>
+    </div>
+    <div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'art'}">
+      <a ng-click="events_button('art')">
+        <img src="images/navs/Artnav.png" style="width:100%;">
+      </a>
+    </div>
+    <div class="col-xs-2 event_menu" ng-class="{menu_selected: ui.event_type == 'it'}">
+      <a ng-click="events_button('it')">
+        <img src="images/navs/Itnav.png" style="width:100%;">
+      </a>
+    </div>
+  </div>
+
+    </CENTER>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+      <hr/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-5 col-md-offset-1">
+    <div class="form-group" >
+      <span>Event filter: {{ui.event_type_filter}}</span>
+      <div class="input-group">
+        <span class="input-group-addon">Filter</span>
+        <input type="text" class="form-control" ng-model="grid_filter_options.filterText" placeholder="filter ...">
+      </div>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  
+<!--    -->
+
+  <div class="col-md-10 col-md-offset-1">
+    <div class="gridList"  ng-grid="grid_options" ></div>
+      <a ng-click="add_event_button()" class="pointer">
+    <div float="left">
+      <img src="images/misc/plus.jpg">
+    </div>
+  </a>
+  </div>
+</div>
+
+
+
+
+
+
+

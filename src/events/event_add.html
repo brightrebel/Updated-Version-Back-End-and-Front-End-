@@ -1,0 +1,103 @@
+
+<!--    -->
+
+
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1">
+    <h2>Add Event</h2>
+  </div>
+</div>
+
+<form class="white-row" name="userForm"  novalidate>
+  <div class="form-body">
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.eventname.$invalid && uidirty}">
+          <label for="eventname">Event Name</label>
+          <input type="text" class="form-control" name="eventname" id="eventname" ng-model="ui.eventname" placeholder="Type in the event name" ng-required="true"/>
+          <p ng-show="userForm.eventname.$invalid && uidirty" class="help-block">Event Name is Required.</p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.eventlocation.$invalid && uidirty}">
+          <label for="eventlocation">Event location</label>
+          <input type="text" class="form-control" name="eventlocation" id="eventlocation" ng-model="ui.eventlocation" placeholder="Type in your event location" ng-required="true"/>
+          <p ng-show="userForm.eventlocation.$invalid && uidirty" class="help-block">Enter a valid event location.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.eventshort.$invalid && uidirty}">
+          <label for="eventshort">Event short desc</label>
+          <input type="eventshort" class="form-control" name="eventshort" id="eventshort" ng-model="ui.eventshort" placeholder="Type in your event short desc" ng-required="true"/>
+          <p ng-show="userForm.eventshort.$invalid && uidirty" class="help-block">Enter a valid event short desc.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : userForm.eventlong.$invalid && uidirty}">
+          <label for="eventlong">Event long desc</label>
+          <input type="eventlong" class="form-control" name="eventlong" id="eventlong" ng-model="ui.eventlong" placeholder="Type in your event long desc" ng-required="true"/>
+          <p ng-show="userForm.eventlong.$invalid && uidirty" class="help-block">Enter a valid event long desc.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <div class="form-group" ng-class="{ 'has-error' : ui.invalid.eventtype_retail && uidirty}">
+          <label class="checkbox persistent"><input type="checkbox" ng-model="ui.eventtype_retail"> Retail </label>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : ui.invalid.eventtype_media && uidirty}">
+          <label class="checkbox persistent"><input type="checkbox" ng-model="ui.eventtype_media"> Media </label>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : ui.invalid.eventtype_studio && uidirty}">
+          <label class="checkbox persistent"><input type="checkbox" ng-model="ui.eventtype_studio"> Studio </label>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : ui.invalid.eventtype_art && uidirty}">
+          <label class="checkbox persistent"><input type="checkbox" ng-model="ui.eventtype_art"> Art </label>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error' : ui.invalid.eventtype_it && uidirty}">
+          <label class="checkbox persistent"><input type="checkbox" ng-model="ui.eventtype_it"> IT </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row ">
+      <div class="col-md-10 col-md-offset-1 well">
+        <div ng-repeat="f in rs.ui_files.list" >
+          <img ng-src="{{rs.api_generic}}/files/{{f.name}}" style="max-height:100px" />
+          <p>{{f.originalname}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row ">
+      <div class="col-md-10 col-md-offset-1 well">
+        <h4>New File</h4>
+        <input type="file" fileread="ui.selected_files" multiple>
+        <br/>
+        <ul>
+          <li ng-repeat="file in ui.selected_files">{{file.name}}</li>
+        </ul>
+        <br/>
+        <button type="button" class="btn btn-primary" ng-click="upload_files_button()" ng-disabled="(!ui.selected_files || ui.selected_files.length === 0)">Upload</button>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-md-5 col-sm-offset-1">
+        <button class="btn btn-primary" ng-click="submit_button(userForm.$valid)">Continue</button>
+      </div>
+    </div>
+
+  </div>
+</form>
+
+
+

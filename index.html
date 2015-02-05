@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bright Rebel</title><meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+  <meta name="robots" content="noindex"/>
+  <link rel="shortcut icon" href="images/favic.ico"/>
+
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+  <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="css/ng-grid.min.css">
+
+  <link type="text/css" rel="stylesheet" href="css/login.css">
+
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+
+  <style>
+    .navbar-collapse ul {
+      margin-top: 20px;
+    }
+
+    .logo {
+      float: left;
+    }
+
+    .mypointer {
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body ng-app="main_app">
+  <div class="navbar navbar-invert">
+
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      <div class="navbar-collapse collapse" id="content_navbar" ng-controller="menu_controller">
+          <ul class="nav navbar-nav pull-right">
+            <li class="active mypointer" id="navli_landing" ><a ng-click="landing_button()" >Home</a></li>
+            <li class="mypointer" id="navli_persons" ng-show="session.authed"><a ng-click="persons_button()" >Persons</a></li>
+            <!-- <li class="mypointer" id="navli_files" ng-show="session.authed"><a ng-click="files_button()" >Files</a></li> -->
+            <li class="mypointer" id="navli_events" ng-show="session.authed"><a ng-click="events_button()" >Events</a></li>
+<!--             <li class="mypointer" id="navli_events" ng-show="session.authed"><a ng-click="add_events_button()" >Add Events</a></li>
+ -->
+            <li class="mypointer" id="navli_login" ng-show="!session.authed"><a ng-click="login_button()" >Login</a></li>
+<!--             <li class="mypointer" id="navli_register" ng-show="!session.authed"><a ng-click="register_button()" >Register</a></li> -->
+
+            <li class="mypointer" id="navli_profile" ng-show="session.authed"><a ng-click="profile_button()" >{{rs.session.username}}</a></li>
+            <li class="mypointer" ng-show="session.authed"><a ng-click="logout()">Logout</a></li>
+          </ul>
+      </div>
+  </div>
+
+
+
+  <div class="includes_header" ng-include="'src/p-includes/header.html'"></div>    
+
+  <div class="container-fluid">
+
+      <ng-view>
+
+      </ng-view>
+  </div>
+
+  <div class="includes_footer" ng-include="'src/p-includes/footer.html'"></div>
+
+
+
+
+  <script type="text/javascript" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="lib/angular-route.min.js"></script>
+  <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.11.0.min.js"></script>
+
+<!--  <script type="text/javascript" src="lib/Blob.js"></script>  -->
+<!--  <script type="text/javascript" src="lib/FileSaver.js"></script>  -->
+<!--  <script type="text/javascript" src="lib/xlsx.core.min.js"></script>  -->
+  <script type="text/javascript" src="lib/ng-grid-2.0.11.min.js"></script>
+
+  <script type="text/javascript" src='lib/lodash.underscore.min.js'></script>
+
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
+  <script type="text/javascript" src="js/util.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
+
+  <script type="text/javascript" src="src/landing/landing.js"></script>
+  <script type="text/javascript" src="src/login/login.js"></script>
+  <script type="text/javascript" src="src/register/register.js"></script>
+  <script type="text/javascript" src="src/persons/persons.js"></script>
+  <script type="text/javascript" src="src/files/files.js"></script>
+  <script type="text/javascript" src="src/events/events.js"></script>
+
+</body>
+</html>
